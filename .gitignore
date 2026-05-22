@@ -1,0 +1,10 @@
+browser.json
+oauth.json
+backend/browser.json
+backend/oauth.json
+.env
+.env.local
+node_modules/
+dist/
+__pycache__/
+*.pyc
