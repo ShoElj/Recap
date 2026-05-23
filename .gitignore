@@ -1,10 +1,34 @@
+# YouTube Music / private auth files
 browser.json
 oauth.json
 backend/browser.json
 backend/oauth.json
+watch-history.json
+backend/watch-history.json
+
+# Environment files
 .env
 .env.local
+frontend/.env
+frontend/.env.local
+backend/.env
+backend/.env.local
+
+# Dependencies
 node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build output
 dist/
+frontend/dist/
+build/
+
+# Python
 __pycache__/
 *.pyc
+venv/
+backend/venv/
+
+# System files
+.DS_Store
