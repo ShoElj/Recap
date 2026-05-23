@@ -4,6 +4,7 @@ import Callback from "./pages/Callback";
 import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
 import WeeklyRecap from "./pages/WeeklyRecap";
+import InstallPrompt from "./components/InstallPrompt";
 
 function SavedRecapRoute() {
   const saved = sessionStorage.getItem("weekly_recap");
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/recap/:id" element={<SavedRecapRoute />} />
         <Route path="/history" element={<History />} />
       </Routes>
+      <InstallPrompt />
     </BrowserRouter>
   );
 }
