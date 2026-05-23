@@ -1,14 +1,14 @@
 <div align="center">
 
-# VibeRecap
+# Recap
 
 ### Your weekly music identity, beautifully recapped.
 
-VibeRecap is a personal Spotify recap app that transforms your recent listening activity, top tracks, favorite artists, and music patterns into a clean weekly recap experience.
+Recap is a personal Spotify recap app that transforms your recent listening activity, top tracks, favorite artists, and music patterns into a clean weekly recap experience.
 
 <br />
 
-![VibeRecap Preview](./frontend/public/preview.png)
+![Recap Preview](./frontend/public/preview.png)
 
 <br />
 
@@ -18,9 +18,9 @@ VibeRecap is a personal Spotify recap app that transforms your recent listening 
 
 ## About The Project
 
-**VibeRecap** is a mobile-first music recap app built for people who want to see their music personality more often than once a year.
+**Recap** is a mobile-first music recap app built for people who want to see their music personality more often than once a year.
 
-Instead of waiting for Spotify Wrapped, VibeRecap lets users connect their Spotify account and instantly generate a beautiful weekly recap based on their latest listening activity.
+Instead of waiting for Spotify Wrapped, Recap lets users connect their Spotify account and instantly generate a beautiful weekly recap based on their latest listening activity.
 
 The app currently works as a Spotify MVP and is designed to later support more music platforms.
 
@@ -43,7 +43,7 @@ The app currently works as a Spotify MVP and is designed to later support more m
 ## App Flow
 
 ```txt
-Open VibeRecap
+Open Recap
       ↓
 Connect Spotify
       ↓
@@ -171,7 +171,7 @@ user-top-read
 user-read-private
 ```
 
-These scopes allow VibeRecap to read:
+These scopes allow Recap to read:
 
 - Recently played tracks
 - Top tracks
@@ -350,7 +350,7 @@ A user can connect Spotify, fetch listening data, view a beautiful weekly recap,
 
 ## Project Vision
 
-VibeRecap is designed to become a personal music memory app.
+Recap is designed to become a personal music memory app.
 
 The long-term idea is simple:
 
