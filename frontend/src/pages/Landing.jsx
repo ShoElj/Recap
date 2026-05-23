@@ -30,25 +30,44 @@ export default function Landing() {
           </p>
         </div>
 
-        <div className="space-y-4">
-          <button
-            type="button"
-            onClick={loginWithSpotify}
-            className="w-full rounded-full bg-[#1DB954] px-6 py-4 text-base font-black text-black shadow-glow transition hover:scale-[1.01] active:scale-[0.99]"
-          >
-            Connect Spotify
-          </button>
-          {hasHistory ? (
-            <Link
-              to="/history"
-              className="block w-full rounded-full bg-white/10 px-6 py-4 text-center text-base font-black text-white transition hover:bg-white/15"
+        <div>
+          <div className="space-y-4">
+            <button
+              type="button"
+              onClick={loginWithSpotify}
+              className="w-full rounded-full bg-[#1DB954] px-6 py-4 text-base font-black text-black shadow-glow transition hover:scale-[1.01] active:scale-[0.99]"
             >
-              View Recap History
+              Connect Spotify
+            </button>
+            {hasHistory ? (
+              <Link
+                to="/history"
+                className="block w-full rounded-full bg-white/10 px-6 py-4 text-center text-base font-black text-white transition hover:bg-white/15"
+              >
+                View Recap History
+              </Link>
+            ) : null}
+            <p className="text-center text-xs leading-5 text-white/45">
+              Uses Spotify PKCE auth. No client secret.
+            </p>
+          </div>
+
+          <footer className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-bold text-white/45">
+            <Link to="/privacy-policy" className="transition hover:text-white">
+              Privacy
             </Link>
-          ) : null}
-          <p className="text-center text-xs leading-5 text-white/45">
-            Uses Spotify PKCE auth. No client secret.
-          </p>
+            <Link to="/terms" className="transition hover:text-white">
+              Terms
+            </Link>
+            <a
+              href="https://github.com/ShoElj/Recap"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-[#1DB954]"
+            >
+              Star on GitHub
+            </a>
+          </footer>
         </div>
       </section>
     </main>
