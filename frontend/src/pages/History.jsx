@@ -49,7 +49,7 @@ export default function History() {
         </nav>
 
         <header>
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#1DB954]">VibeRecap</p>
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#1DB954]">Recap</p>
           <h1 className="mt-4 text-5xl font-black leading-none sm:text-6xl">Recap History</h1>
           <p className="mt-4 max-w-xl text-base leading-7 text-white/55">
             Recent recaps saved on this device. Spotify tokens are not stored here.

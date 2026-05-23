@@ -3,7 +3,10 @@ import Landing from "./pages/Landing";
 import Callback from "./pages/Callback";
 import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
 import WeeklyRecap from "./pages/WeeklyRecap";
+import InstallPrompt from "./components/InstallPrompt";
 
 function SavedRecapRoute() {
   const saved = sessionStorage.getItem("weekly_recap");
@@ -21,7 +24,10 @@ export default function App() {
         <Route path="/recap" element={<SavedRecapRoute />} />
         <Route path="/recap/:id" element={<SavedRecapRoute />} />
         <Route path="/history" element={<History />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
+      <InstallPrompt />
     </BrowserRouter>
   );
 }

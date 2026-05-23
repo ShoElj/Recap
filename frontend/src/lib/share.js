@@ -120,7 +120,7 @@ export async function createRecapImageBlob(recap) {
   fillRoundRect(ctx, 80, 80, 920, 360, 64, GREEN);
   ctx.fillStyle = BLACK;
   ctx.font = "900 28px Arial";
-  ctx.fillText("VIBERECAP", 126, 150);
+  ctx.fillText("Recap", 126, 150);
   ctx.font = "900 102px Arial";
   drawWrappedText(ctx, "Your Week in Music", 126, 270, 760, 98, 2);
   ctx.font = "900 34px Arial";
@@ -138,7 +138,7 @@ export async function createRecapImageBlob(recap) {
 
   ctx.fillStyle = "rgba(255, 255, 255, 0.42)";
   ctx.font = "700 24px Arial";
-  ctx.fillText("Generated with VibeRecap", 80, 1872);
+  ctx.fillText("Generated with Recap", 80, 1872);
 
   return canvasToBlob(canvas);
 }
@@ -148,7 +148,7 @@ export async function downloadRecapImage(recap) {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "viberecap-weekly-recap.png";
+  link.download = "Recap-weekly-recap.png";
   document.body.appendChild(link);
   link.click();
   link.remove();
@@ -156,7 +156,7 @@ export async function downloadRecapImage(recap) {
 }
 
 export async function shareRecap(recap) {
-  const shareText = `My VibeRecap: ${recap.estimatedListeningMinutes} estimated minutes, ${recap.musicPersonality}, top song ${recap.topSong?.name || "unknown"}.`;
+  const shareText = `My Recap: ${recap.estimatedListeningMinutes} estimated minutes, ${recap.musicPersonality}, top song ${recap.topSong?.name || "unknown"}.`;
 
   if (!navigator.share) {
     await navigator.clipboard.writeText(shareText);
@@ -164,11 +164,11 @@ export async function shareRecap(recap) {
   }
 
   const blob = await createRecapImageBlob(recap);
-  const file = new File([blob], "viberecap-weekly-recap.png", { type: "image/png" });
+  const file = new File([blob], "Recap-weekly-recap.png", { type: "image/png" });
 
   if (navigator.canShare?.({ files: [file] })) {
     await navigator.share({
-      title: "My VibeRecap",
+      title: "My Recap",
       text: shareText,
       files: [file],
     });
@@ -176,7 +176,7 @@ export async function shareRecap(recap) {
   }
 
   await navigator.share({
-    title: "My VibeRecap",
+    title: "My Recap",
     text: shareText,
   });
   return "Shared recap.";

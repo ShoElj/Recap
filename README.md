@@ -303,7 +303,7 @@ The MVP currently supports:
 | Recap history | Done |
 | Mobile-first UI | In progress |
 | Shareable recap image | Planned |
-| PWA install support | Planned |
+| PWA install support | Done |
 | YouTube Music support | Experimental |
 
 ---
@@ -325,7 +325,6 @@ Possible future options:
 
 ## Future Improvements
 
-- Add PWA install support
 - Improve mobile app layout
 - Add recap image export
 - Add refresh recap button
@@ -364,3 +363,82 @@ The long-term idea is simple:
 ### Built with love for music lovers.
 
 </div>
+
+---
+
+## PWA Support
+
+Recap now includes Progressive Web App (PWA) support using `vite-plugin-pwa`.
+
+### What this adds
+
+- Installable app experience on supported browsers/devices
+- Standalone launch mode from the home screen
+- App manifest with name, theme color, icons, and start URL
+- Service worker registration with auto-update behavior
+- Mobile metadata for Android and iOS home screen launches
+
+### Test locally
+
+```bash
+cd frontend
+npm install
+npm run dev -- --host 127.0.0.1
+```
+
+The development server runs at:
+
+```txt
+http://127.0.0.1:5173/
+```
+
+For production-like PWA validation:
+
+```bash
+cd frontend
+npm run build
+npm run preview -- --host 127.0.0.1
+```
+
+Then open:
+
+```txt
+http://127.0.0.1:4173/
+```
+
+### Install on Android
+
+1. Open Recap in Chrome.
+2. Use the in-app install prompt (when shown) or browser install menu.
+3. Confirm installation.
+4. Launch Recap from your home screen.
+
+### Install on iOS
+
+iOS install is manual through Safari:
+
+1. Open Recap in Safari.
+2. Tap **Share**.
+3. Tap **Add to Home Screen**.
+4. Launch Recap from the generated home screen icon.
+
+### Standalone mode
+
+Installed launches use `display: standalone`, `orientation: portrait`, `scope: /`, and `start_url: /` so Recap opens like a lightweight mobile app instead of a regular browser tab.
+
+### Vercel notes
+
+- Keep the Spotify production redirect URI set to `https://recap-six-dun.vercel.app/callback`.
+- Keep the local redirect URI set to `http://127.0.0.1:5173/callback`.
+- The service worker avoids using the app-shell navigation fallback for `/callback` so Spotify OAuth redirects can complete through the live network response.
+- React Router routes continue to use the Vercel SPA fallback for `/`, `/dashboard`, `/recap`, and history routes.
+
+### Icons
+
+App icons are included at:
+
+- `frontend/public/icons/icon-192.png`
+- `frontend/public/icons/icon-512.png`
+- `frontend/public/icons/maskable-512.png`
+
+Replace these with final branded production artwork if the current generated icons are not the desired launch icon.

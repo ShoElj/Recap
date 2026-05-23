@@ -58,7 +58,7 @@ export default function WeeklyRecap({ recap }) {
           <section className="relative overflow-hidden rounded-[2rem] bg-[#1DB954] p-6 text-black sm:p-8 lg:min-h-[420px] lg:p-10">
             <div className="relative z-10 flex h-full flex-col justify-between gap-12">
               <div>
-                <p className="text-[11px] font-black uppercase tracking-[0.32em]">VibeRecap</p>
+                <p className="text-[11px] font-black uppercase tracking-[0.32em]">Recap</p>
                 <h1 className="mt-8 max-w-[11ch] text-[3.4rem] font-black leading-[0.88] tracking-normal sm:text-7xl lg:text-8xl">
                   Your Week in Music
                 </h1>
