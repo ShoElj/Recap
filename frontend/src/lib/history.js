@@ -1,4 +1,4 @@
-const HISTORY_KEY = "viberecap_history";
+const HISTORY_KEY = "Recap_history";
 const MAX_HISTORY_ITEMS = 8;
 
 function readHistory() {

@@ -61,7 +61,7 @@ export default function Dashboard() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#1DB954]">Spotify required</p>
           <h1 className="mt-4 text-3xl font-black">Connect Spotify first</h1>
           <p className="mt-3 text-sm leading-6 text-white/65">
-            VibeRecap needs Spotify access to build your weekly recap.
+            Recap needs Spotify access to build your weekly recap.
           </p>
           <button
             type="button"

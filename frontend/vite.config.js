@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "icons/*.png"],
       manifest: {
-        name: "VibeRecap",
-        short_name: "VibeRecap",
+        name: "Recap",
+        short_name: "Recap",
         description: "A personal Spotify weekly music recap app.",
         theme_color: "#1DB954",
         background_color: "#050505",

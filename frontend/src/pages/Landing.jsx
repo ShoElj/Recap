@@ -11,7 +11,7 @@ export default function Landing() {
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-full bg-[#1DB954]" />
-            <span className="text-lg font-black">VibeRecap</span>
+            <span className="text-lg font-black">Recap</span>
           </div>
           <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white/70">
             Spotify MVP

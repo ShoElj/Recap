@@ -39,9 +39,9 @@ export default function InstallPrompt() {
 
   return (
     <div className="fixed bottom-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-sm -translate-x-1/2 rounded-xl border border-zinc-700 bg-zinc-900/95 p-4 shadow-2xl backdrop-blur">
-      <p className="text-sm font-medium text-white">Install VibeRecap</p>
+      <p className="text-sm font-medium text-white">Install Recap</p>
       <p className="mt-1 text-xs text-zinc-300">
-        Add VibeRecap to your home screen for a faster app-like experience.
+        Add Recap to your home screen for a faster app-like experience.
       </p>
       <div className="mt-3 flex gap-2">
         <button

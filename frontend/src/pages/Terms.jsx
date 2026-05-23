@@ -5,7 +5,7 @@ export default function Terms() {
     <main className="min-h-screen bg-black px-5 py-8 text-white sm:px-6">
       <article className="mx-auto w-full max-w-3xl">
         <Link to="/" className="text-sm font-black text-[#1DB954] transition hover:text-[#1ed760]">
-          Back to VibeRecap
+          Back to Recap
         </Link>
 
         <header className="mt-10 border-b border-white/10 pb-8">
